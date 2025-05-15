@@ -1,10 +1,13 @@
-/* Global styles */
+/* Global Styles */
 body {
   font-family: "Merriweather", serif;
-  background-color: #f7f1e3;
+  background: linear-gradient(135deg, #f7f1e3, #f2e1c1);
   color: #2c2c2c;
+  margin: 0;
+  padding: 0;
 }
 
+/* Container */
 .container {
   max-width: 1000px;
   margin: 0 auto;
@@ -13,11 +16,12 @@ body {
 
 /* Navbar */
 .navbar {
-  background-color: #7b2d26;
+  background: linear-gradient(135deg, #7b2d26, #602820);
   color: #fff;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   border-radius: 12px;
   margin-bottom: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 .navbar-content {
@@ -27,7 +31,7 @@ body {
 }
 
 .brand {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: bold;
 }
 
@@ -35,9 +39,15 @@ body {
   background-color: #e09f3e;
   color: white;
   border: none;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.5rem;
   border-radius: 8px;
   cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.create-btn:hover {
+  background-color: #cc8a33;
+  transform: translateY(-2px);
 }
 
 /* Posts */
@@ -48,14 +58,16 @@ body {
 }
 
 .post-card {
-  background-color: #fff;
-  border: 2px solid #e09f3e;
+  background-color: #ffffffc7;
+  border: 1px solid #e09f3e;
   border-radius: 12px;
-  padding: 1rem;
-  transition: transform 0.3s ease;
+  padding: 1.5rem;
+  transition: box-shadow 0.3s, transform 0.2s;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 .post-card:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
   transform: scale(1.02);
 }
 
@@ -67,25 +79,6 @@ body {
 .card-header h5 {
   margin: 0.3rem 0;
   color: #e09f3e;
-}
-
-.card-footer {
-  margin-top: 1rem;
-}
-
-.edit-btn,
-.delete-btn {
-  background-color: #e09f3e;
-  color: white;
-  border: none;
-  padding: 0.4rem 0.8rem;
-  margin-right: 0.5rem;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.delete-btn {
-  background-color: #7b2d26;
 }
 
 /* Modal */
@@ -102,12 +95,13 @@ body {
 }
 
 .modal-content {
-  background-color: #fff;
+  background-color: #ffffffee;
   padding: 2rem;
   border-radius: 12px;
-  border: 2px solid #e09f3e;
+  border: 1px solid #e09f3e;
   max-width: 400px;
   width: 100%;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 }
 
 .modal-content h2 {
@@ -123,10 +117,17 @@ body {
 
 .modal-content input {
   width: 100%;
-  padding: 0.5rem;
+  padding: 0.6rem;
   margin-bottom: 1rem;
-  border-radius: 6px;
+  border-radius: 8px;
   border: 1px solid #ddd;
+  background-color: #fefcf8;
+  transition: border 0.3s;
+}
+
+.modal-content input:focus {
+  border-color: #e09f3e;
+  outline: none;
 }
 
 .modal-actions {
@@ -140,12 +141,52 @@ body {
   background-color: #7b2d26;
   color: white;
   border: none;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.5rem;
   border-radius: 8px;
   cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.close-btn:hover,
+.save-btn:hover,
+.update-btn:hover {
+  background-color: #602820;
+  transform: translateY(-2px);
 }
 
 .save-btn,
 .update-btn {
   background-color: #e09f3e;
+}
+
+.save-btn:hover,
+.update-btn:hover {
+  background-color: #cc8a33;
+}
+
+/* Smooth Hover Effects for Buttons */
+.edit-btn,
+.delete-btn {
+  background-color: #e09f3e;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  margin-right: 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.edit-btn:hover,
+.delete-btn:hover {
+  background-color: #cc8a33;
+  transform: translateY(-2px);
+}
+
+.delete-btn {
+  background-color: #7b2d26;
+}
+
+.delete-btn:hover {
+  background-color: #602820;
 }
