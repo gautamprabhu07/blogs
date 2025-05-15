@@ -1,0 +1,58 @@
+<div class="container">
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-content">
+      <span class="brand">BlogApp</span>
+      <button class="create-btn" (click)="openCreateModal()">Create Post</button>
+    </div>
+  </nav>
+
+  <!-- Posts -->
+  <div class="posts">
+    <div class="post-card" *ngFor="let post of allPosts">
+      <div class="card-header">
+        <h3>{{ post.title }}</h3>
+        <h5>{{ post.username }}</h5>
+      </div>
+      <p>{{ post.content }}</p>
+      <div class="card-footer">
+        <button class="edit-btn" (click)="editPost(post)">Edit</button>
+        <button class="delete-btn" (click)="deletePostData(post)">Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Create Post Modal -->
+  <div class="modal" *ngIf="showCreateModal">
+    <div class="modal-content">
+      <h2>Create Post</h2>
+      <label>Title</label>
+      <input type="text" [(ngModel)]="title" />
+      <label>Content</label>
+      <input type="text" [(ngModel)]="content" />
+      <label>Username</label>
+      <input type="text" [(ngModel)]="username" />
+      <div class="modal-actions">
+        <button class="close-btn" (click)="closeCreateModal()">Close</button>
+        <button class="save-btn" (click)="createPostData()">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Edit Post Modal -->
+  <div class="modal" *ngIf="showEditModal">
+    <div class="modal-content">
+      <h2>Edit Post</h2>
+      <label>Title</label>
+      <input type="text" [(ngModel)]="title" />
+      <label>Content</label>
+      <input type="text" [(ngModel)]="content" />
+      <label>Username</label>
+      <input type="text" [(ngModel)]="username" />
+      <div class="modal-actions">
+        <button class="close-btn" (click)="closeEditModal()">Close</button>
+        <button class="update-btn" (click)="updatePost()">Update</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,151 @@
+/* Global styles */
+body {
+  font-family: "Merriweather", serif;
+  background-color: #f7f1e3;
+  color: #2c2c2c;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #7b2d26;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.create-btn {
+  background-color: #e09f3e;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Posts */
+.posts {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.post-card {
+  background-color: #fff;
+  border: 2px solid #e09f3e;
+  border-radius: 12px;
+  padding: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.post-card:hover {
+  transform: scale(1.02);
+}
+
+.card-header h3 {
+  margin: 0;
+  color: #7b2d26;
+}
+
+.card-header h5 {
+  margin: 0.3rem 0;
+  color: #e09f3e;
+}
+
+.card-footer {
+  margin-top: 1rem;
+}
+
+.edit-btn,
+.delete-btn {
+  background-color: #e09f3e;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  margin-right: 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.delete-btn {
+  background-color: #7b2d26;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 2px solid #e09f3e;
+  max-width: 400px;
+  width: 100%;
+}
+
+.modal-content h2 {
+  margin-bottom: 1rem;
+  color: #7b2d26;
+}
+
+.modal-content label {
+  margin: 0.5rem 0;
+  display: block;
+  color: #2c2c2c;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.close-btn,
+.save-btn,
+.update-btn {
+  background-color: #7b2d26;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.save-btn,
+.update-btn {
+  background-color: #e09f3e;
+}
